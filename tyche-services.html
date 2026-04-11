@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Tyche Digital Agency</title>
+<meta name="description" content="Marketing strategy, conversion systems, done-for-you implementation, and Direction Sessions for service-based businesses. Tyche Digital Agency, Las Vegas, NV.">
+<link rel="icon" href="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/695ea829a0a48408c7196071.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ivory:#F8F5F0;--ivory-dark:#F0EBE3;--navy:#0A1F44;
+  --brown:#7C5C3B;--olive:#3E4D3A;--camel:#D1C4A7;
+  --camel-mid:#B8A98A;--camel-light:#EDE5D4;
+  --ink:#1A1610;--mid:#6B6156;--light:#9A9088;
+  --border-camel:rgba(184,169,138,0.40);
+  --serif-h:'Playfair Display',Georgia,serif;
+  --serif-b:'Libre Baskerville',Georgia,serif;
+  --sans:'Raleway',system-ui,sans-serif;
+  --max:1180px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ivory);color:var(--ink);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:200;background:rgba(248,245,240,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border-camel);height:72px;display:flex;align-items:center;padding:0 5vw;justify-content:space-between}
+.nav__logo img{height:40px;width:auto}
+.nav__links{display:flex;align-items:center;gap:36px;list-style:none}
+.nav__links a{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);transition:color .2s}
+.nav__links a:hover,.nav__links a.active{color:var(--navy)}
+.nav__cta{background:var(--navy)!important;color:var(--ivory)!important;padding:10px 26px!important;font-size:10px!important;font-weight:600!important;letter-spacing:.14em!important;text-transform:uppercase!important;transition:background .25s!important}
+.nav__cta:hover{background:var(--olive)!important;color:var(--ivory)!important}
+
+/* SHARED */
+.eyebrow{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:var(--brown);display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.eyebrow::before{content:'';display:inline-block;width:28px;height:1px;background:var(--camel-mid);flex-shrink:0}
+.eyebrow--light{color:rgba(209,196,167,.55)}
+.eyebrow--light::before{background:rgba(209,196,167,.35)}
+.section-title{font-family:var(--serif-h);font-size:clamp(34px,3.8vw,54px);font-weight:400;line-height:1.1;letter-spacing:-.015em;color:var(--navy);margin-bottom:20px}
+.section-title em{font-style:italic;color:var(--brown)}
+.section-title--light{color:var(--ivory)}
+.section-title--light em{color:var(--camel)}
+.inner{max-width:var(--max);margin:0 auto}
+.btn--primary{background:var(--navy);color:var(--ivory);padding:15px 40px;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:background .25s;display:inline-block}
+.btn--primary:hover{background:var(--olive);color:var(--ivory)}
+.btn--ivory{display:inline-block;background:var(--ivory);color:var(--navy);padding:18px 52px;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:opacity .2s}
+.btn--ivory:hover{opacity:.88;color:var(--navy)}
+.btn--ghost{font-family:var(--serif-h);font-style:italic;font-size:17px;color:var(--brown);border-bottom:1px solid var(--border-camel);padding-bottom:3px;transition:color .2s,border-color .2s}
+.btn--ghost:hover{color:var(--navy);border-color:var(--camel-mid)}
+
+/* PAGE HEADER */
+.page-header{background:var(--navy);padding:96px 5vw 80px;position:relative;overflow:hidden;border-bottom:3px solid var(--camel-mid)}
+.page-header::before{content:'';position:absolute;top:0;left:5vw;right:5vw;height:1px;background:linear-gradient(to right,transparent,rgba(209,196,167,.25),transparent)}
+.page-header__inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;position:relative;z-index:1}
+.page-header__eyebrow{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:rgba(209,196,167,.5);display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.page-header__eyebrow::before{content:'';display:inline-block;width:28px;height:1px;background:rgba(209,196,167,.35);flex-shrink:0}
+.page-header__h1{font-family:var(--serif-h);font-size:clamp(40px,5vw,66px);font-weight:400;line-height:1.08;color:var(--ivory);letter-spacing:-.02em}
+.page-header__h1 em{font-style:italic;color:var(--camel)}
+.page-header__sub{font-family:var(--serif-b);font-size:17px;font-style:italic;color:rgba(248,245,240,.45);line-height:1.85;padding-top:16px}
+
+/* CLARITY PATH intro */
+.clarity-intro{padding:80px 5vw;background:var(--ivory);border-bottom:1px solid var(--border-camel)}
+.clarity-intro__inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.clarity-intro__pull{font-family:var(--serif-h);font-size:26px;font-style:italic;font-weight:400;color:var(--navy);line-height:1.55;border-left:2px solid var(--camel-mid);padding-left:28px}
+.clarity-intro__body{font-family:var(--serif-b);font-size:16px;color:var(--mid);line-height:1.9}
+
+/* FEATURED SERVICE -- Direction Session */
+.service-featured{padding:0;background:var(--ivory-dark)}
+.service-featured__inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;min-height:580px}
+.service-featured__content{padding:80px 72px;display:flex;flex-direction:column;justify-content:center}
+.service-featured__label{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:var(--brown);display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.service-featured__label::before{content:'';width:28px;height:1px;background:var(--camel-mid)}
+.service-featured__name{font-family:var(--serif-h);font-size:clamp(34px,3.5vw,50px);font-weight:400;line-height:1.1;letter-spacing:-.015em;color:var(--navy);margin-bottom:10px}
+.service-featured__name em{font-style:italic;color:var(--brown)}
+.service-featured__price{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--camel-mid);margin-bottom:28px}
+.service-featured__body{font-family:var(--serif-b);font-size:16px;color:var(--mid);line-height:1.9;margin-bottom:32px}
+.service-featured__includes{list-style:none;margin-bottom:40px}
+.service-featured__includes li{font-family:var(--serif-b);font-size:14px;font-style:italic;color:var(--mid);padding:10px 0;border-bottom:1px solid var(--border-camel);display:flex;gap:14px;line-height:1.6}
+.service-featured__includes li:first-child{border-top:1px solid var(--border-camel)}
+.service-featured__includes li::before{content:'\2713';color:var(--olive);flex-shrink:0;font-style:normal}
+.service-featured__actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.service-featured__img{background:var(--navy);position:relative;overflow:hidden}
+.service-featured__img img{width:100%;height:100%;object-fit:cover;opacity:.65;filter:sepia(15%) contrast(1.08);mix-blend-mode:luminosity}
+.service-featured__img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,31,68,.5) 0%,transparent 60%)}
+
+/* SERVICE GRID -- other services */
+.services-grid-section{padding:96px 5vw;background:var(--ivory)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border-camel);overflow:hidden;margin-top:64px}
+.service-card{padding:52px 40px;border-right:1px solid var(--border-camel);background:var(--ivory);transition:background .3s;position:relative;overflow:hidden}
+.service-card:last-child{border-right:none}
+.service-card:hover{background:var(--camel-light)}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--camel-mid);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.service-card:hover::before{transform:scaleX(1)}
+.service-num{font-family:var(--serif-h);font-size:60px;font-weight:400;color:var(--border-camel);line-height:1;margin-bottom:22px}
+.service-name{font-family:var(--serif-h);font-size:24px;font-weight:400;color:var(--navy);margin-bottom:8px;line-height:1.2}
+.service-price-tag{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--brown);margin-bottom:20px}
+.service-desc{font-family:var(--serif-b);font-size:14px;font-style:italic;color:var(--mid);line-height:1.85;margin-bottom:32px}
+.service-link{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--border-camel);padding-bottom:3px;display:inline-flex;align-items:center;gap:8px;transition:gap .2s,color .2s,border-color .2s}
+.service-link:hover{gap:14px;color:var(--brown);border-color:var(--camel-mid)}
+
+/* IMPLEMENTATION SERVICES */
+.impl-section{padding:96px 5vw;background:var(--camel-light)}
+.impl-header{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:64px;padding-bottom:56px;border-bottom:1px solid var(--border-camel)}
+.impl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.impl-card{background:var(--ivory);border:1px solid var(--border-camel);padding:44px 40px;transition:background .25s;position:relative;overflow:hidden}
+.impl-card:hover{background:var(--ivory-dark)}
+.impl-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--camel-mid);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.impl-card:hover::after{transform:scaleX(1)}
+.impl-card__icon{font-family:var(--serif-h);font-size:44px;font-weight:400;color:var(--border-camel);line-height:1;margin-bottom:18px}
+.impl-card__name{font-family:var(--serif-h);font-size:22px;font-weight:400;color:var(--navy);margin-bottom:8px;line-height:1.2}
+.impl-card__desc{font-family:var(--serif-b);font-size:14px;font-style:italic;color:var(--mid);line-height:1.85;margin-bottom:24px}
+.impl-card__link{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--border-camel);padding-bottom:2px;display:inline-flex;gap:8px;transition:gap .2s,color .2s,border-color .2s}
+.impl-card__link:hover{gap:12px;color:var(--brown);border-color:var(--camel-mid)}
+
+/* FREE RESOURCE */
+.free-section{background:var(--olive);padding:88px 5vw}
+.free-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.free-body{font-family:var(--serif-b);font-size:16px;color:rgba(248,245,240,.55);line-height:1.9;margin-bottom:36px}
+.free-card{background:rgba(248,245,240,.06);border:1px solid rgba(209,196,167,.15);padding:48px 44px}
+.free-card__title{font-family:var(--serif-h);font-size:28px;font-weight:400;color:var(--ivory);margin-bottom:10px}
+.free-card__sub{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(209,196,167,.45);margin-bottom:20px}
+.free-card__desc{font-family:var(--serif-b);font-size:15px;font-style:italic;color:rgba(248,245,240,.45);line-height:1.85;margin-bottom:32px}
+.btn--camel{display:inline-block;background:var(--camel-light);color:var(--navy);padding:14px 36px;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;transition:opacity .2s}
+.btn--camel:hover{opacity:.88;color:var(--navy)}
+
+/* HOW TO START */
+.start-section{padding:96px 5vw;background:var(--ivory-dark)}
+.start-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border-camel);overflow:hidden;margin-top:64px}
+.start-step{padding:52px 40px;border-right:1px solid var(--border-camel);background:var(--ivory-dark)}
+.start-step:last-child{border-right:none}
+.start-step__num{font-family:var(--serif-h);font-size:60px;font-weight:400;color:var(--border-camel);line-height:1;margin-bottom:20px}
+.start-step__title{font-family:var(--serif-h);font-size:22px;font-weight:400;color:var(--navy);margin-bottom:12px}
+.start-step__desc{font-family:var(--serif-b);font-size:14px;font-style:italic;color:var(--mid);line-height:1.8;margin-bottom:24px}
+.start-step__link{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--border-camel);padding-bottom:2px;transition:color .2s,border-color .2s}
+.start-step__link:hover{color:var(--brown);border-color:var(--camel-mid)}
+
+/* CTA */
+.cta-section{background:var(--navy);padding:120px 5vw;text-align:center;position:relative;overflow:hidden}
+.cta-section::after{content:'';position:absolute;top:0;left:5vw;right:5vw;height:1px;background:linear-gradient(to right,transparent,rgba(209,196,167,.3),transparent)}
+.cta-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.cta-h2{font-family:var(--serif-h);font-size:clamp(38px,5vw,64px);font-weight:400;line-height:1.1;color:var(--ivory);margin-bottom:24px;letter-spacing:-.015em}
+.cta-h2 em{font-style:italic;color:var(--camel)}
+.cta-sub{font-family:var(--serif-b);font-size:17px;font-style:italic;color:rgba(248,245,240,.45);line-height:1.9;margin-bottom:52px;max-width:440px;margin-left:auto;margin-right:auto}
+.cta-note{margin-top:22px;font-family:var(--serif-h);font-size:15px;font-style:italic;color:rgba(248,245,240,.22)}
+
+/* FOOTER */
+.footer{background:#070d1a;padding:88px 5vw 48px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:64px;margin-bottom:72px;padding-bottom:64px;border-bottom:1px solid rgba(209,196,167,.06)}
+.footer__logo img{height:34px;opacity:.65;margin-bottom:28px}
+.footer__desc{font-family:var(--serif-b);font-size:14px;font-style:italic;color:rgba(209,196,167,.25);line-height:1.9;max-width:240px}
+.footer-col h4{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:rgba(209,196,167,.2);margin-bottom:24px}
+.footer-col a{display:block;font-family:var(--sans);font-size:13px;font-weight:300;color:rgba(248,245,240,.35);padding:6px 0;transition:color .2s}
+.footer-col a:hover{color:rgba(248,245,240,.8)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:11px;color:rgba(248,245,240,.15)}
+.footer-bottom a{color:rgba(248,245,240,.2)}
+
+@media(max-width:1024px){
+  .page-header__inner,.clarity-intro__inner,.impl-header,.free-inner{grid-template-columns:1fr;gap:40px}
+  .service-featured__inner{grid-template-columns:1fr}
+  .service-featured__img{height:50vw}
+  .services-grid,.impl-grid,.start-grid{grid-template-columns:1fr}
+  .service-card,.impl-card{border-right:none;border-bottom:1px solid var(--border-camel)}
+  .service-card:last-child,.impl-card:last-child{border-bottom:none}
+  .start-step{border-right:none;border-bottom:1px solid var(--border-camel)}
+  .start-step:last-child{border-bottom:none}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .nav__links{display:none}
+}
+@media(max-width:600px){.footer-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html"><img src="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/693b11a65b7f645e8fd3a4ef.png" alt="Tyche Digital Agency" style="height:40px"></a>
+  <ul class="nav__links">
+    <li><a href="tyche-services.html" class="active">Services</a></li>
+    <li><a href="tyche-about.html">About</a></li>
+    <li><a href="index.html#process">Our Process</a></li>
+    <li><a href="https://tychedigitalagency.blogspot.com/" target="_blank">Journal</a></li>
+    <li><a href="tyche-faq.html">FAQ</a></li>
+    <li><a href="tyche-book.html" class="nav__cta">Book a Call</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="page-header__inner">
+    <div>
+      <p class="page-header__eyebrow">Tyche Digital Agency</p>
+      <h1 class="page-header__h1">Work built around<br><em>what you actually need.</em></h1>
+    </div>
+    <p class="page-header__sub">Every service at Tyche begins with clarity. We find the structural issue first. Then we build, fix, or hand off, depending on where you are.</p>
+  </div>
+</header>
+
+<!-- CLARITY INTRO -->
+<div class="clarity-intro">
+  <div class="clarity-intro__inner inner">
+    <blockquote class="clarity-intro__pull">Clarity before execution. Once the decision is clean, momentum follows.</blockquote>
+    <p class="clarity-intro__body">Most businesses we work with are not doing nothing. They are doing a lot. The issue is that their marketing is not built to convert attention into action. We find the one load-bearing issue generating most of the downstream drag, and we fix it. Everything else gets easier from there.</p>
+  </div>
+</div>
+
+<!-- FEATURED: DIRECTION SESSION -->
+<section class="service-featured" id="direction-session">
+  <div class="service-featured__inner inner" style="max-width:100%">
+    <div class="service-featured__content">
+      <p class="service-featured__label">Most Popular Starting Point</p>
+      <h2 class="service-featured__name">Direction Session<br><em>Business Second Opinion</em></h2>
+      <p class="service-featured__price">$500 &middot; 60 Minutes &middot; Always the Entry Point for Advisory Work</p>
+      <p class="service-featured__body">A focused diagnostic read on your business. We review your offers, visibility, and marketing, then identify the load-bearing issue generating most downstream problems and map the next right moves. You leave with clarity you can act on that same day. No follow-up retainer is required or implied.</p>
+      <ul class="service-featured__includes">
+        <li>Pre-session intake review so no time is wasted on basics</li>
+        <li>60-minute diagnostic session with Veronica Dietz</li>
+        <li>Identification of the primary load-bearing issue</li>
+        <li>Prioritized next moves you can implement immediately</li>
+        <li>Written session summary delivered after the call</li>
+        <li>No ongoing commitment required</li>
+      </ul>
+      <div class="service-featured__actions">
+        <a href="tyche-book.html" class="btn--primary">Book a Direction Session</a>
+        <a href="tyche-faq.html#direction-session" class="btn--ghost">Read the FAQ</a>
+      </div>
+    </div>
+    <div class="service-featured__img">
+      <img src="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/6902a1cf12e9016158034656.jpeg" alt="Veronica Dietz, founder of Tyche Digital Agency">
+      <div class="service-featured__img-overlay"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADDITIONAL STRATEGY SERVICES -->
+<section class="services-grid-section" id="strategy">
+  <div class="inner">
+    <p class="eyebrow">Strategy and Clarity Work</p>
+    <h2 class="section-title">Find the problem<br><em>before you build.</em></h2>
+    <p style="font-family:var(--serif-b);font-size:17px;color:var(--mid);line-height:1.9;max-width:520px">Every engagement at Tyche begins with diagnosis. These offerings are the starting point.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-name">Check Your Alignment</div>
+        <div class="service-price-tag">Free Diagnostic</div>
+        <p class="service-desc">Not sure what to prioritize? This free diagnostic narrows your focus to the few actions that actually move inquiries and revenue right now. A quick read on what is helping versus what is noise.</p>
+        <a href="https://go.tychedigitalagency.net/clarity-pathway" target="_blank" class="service-link">Start free &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-name">Orientation Intensive</div>
+        <div class="service-price-tag">Deeper Engagement &middot; Inquiry Required</div>
+        <p class="service-desc">A deeper container for founders who need more than a single session. An undefined-timeline engagement focused on locating and resolving the structural issues holding the business back.</p>
+        <a href="tyche-book.html" class="service-link">Inquire &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-name">Investment Guide</div>
+        <div class="service-price-tag">Free Download</div>
+        <p class="service-desc">Not sure which service is the right fit? Download the investment guide to see all Tyche offerings, pricing, and the right entry point based on where you are right now.</p>
+        <a href="https://go.tychedigitalagency.net/investment-guide" target="_blank" class="service-link">Download &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPLEMENTATION SERVICES -->
+<section class="impl-section" id="implementation">
+  <div class="inner">
+    <div class="impl-header">
+      <div>
+        <p class="eyebrow">Done-For-You Implementation</p>
+        <h2 class="section-title">We build it.<br><em>You run the business.</em></h2>
+      </div>
+      <p style="font-family:var(--serif-b);font-size:17px;color:var(--mid);line-height:1.9;max-width:440px">Implementation engagements at Tyche are always scoped after a Direction Session or diagnostic. We build in the right direction, not just execute tactics on a broken structure.</p>
+    </div>
+    <div class="impl-grid">
+      <div class="impl-card">
+        <div class="impl-card__icon">01</div>
+        <div class="impl-card__name">Website and Funnel Systems</div>
+        <p class="impl-card__desc">We build and manage the conversion infrastructure behind your marketing, including landing pages, full websites, funnels, and the flows that turn traffic into booked calls consistently.</p>
+        <a href="https://go.tychedigitalagency.net/done-for-you-support" target="_blank" class="impl-card__link">Learn more &rarr;</a>
+      </div>
+      <div class="impl-card">
+        <div class="impl-card__icon">02</div>
+        <div class="impl-card__name">Email Marketing and Automation</div>
+        <p class="impl-card__desc">Sequences, nurture flows, and automated systems that keep your audience moving toward a decision without you manually pushing every week.</p>
+        <a href="https://go.tychedigitalagency.net/email-marketing" target="_blank" class="impl-card__link">Learn more &rarr;</a>
+      </div>
+      <div class="impl-card">
+        <div class="impl-card__icon">03</div>
+        <div class="impl-card__name">SEO and Organic Visibility</div>
+        <p class="impl-card__desc">We build the content architecture and technical SEO foundation that brings qualified traffic to your site without paid ads. Compounding, not spiking.</p>
+        <a href="https://go.tychedigitalagency.net/seo" target="_blank" class="impl-card__link">Learn more &rarr;</a>
+      </div>
+      <div class="impl-card">
+        <div class="impl-card__icon">04</div>
+        <div class="impl-card__name">Paid Ads Management</div>
+        <p class="impl-card__desc">Paid traffic that converts requires a working funnel underneath it. We manage paid ads as part of a complete system, not as a standalone tactic layered onto a broken foundation.</p>
+        <a href="https://go.tychedigitalagency.net/paid-ads-management" target="_blank" class="impl-card__link">Learn more &rarr;</a>
+      </div>
+      <div class="impl-card">
+        <div class="impl-card__icon">05</div>
+        <div class="impl-card__name">Business Systems and Automations</div>
+        <p class="impl-card__desc">We build the backend infrastructure that removes manual tasks, tightens your operations, and creates the consistency that makes growth sustainable.</p>
+        <a href="https://go.tychedigitalagency.net/business-systems-automations" target="_blank" class="impl-card__link">Learn more &rarr;</a>
+      </div>
+      <div class="impl-card">
+        <div class="impl-card__icon">06</div>
+        <div class="impl-card__name">Website in a Week</div>
+        <p class="impl-card__desc">A fast-track, done-for-you website build for founders who need a clean, converting site without a months-long agency process. Strategy first, execution fast.</p>
+        <a href="https://go.tychedigitalagency.net/website-in-a-week" target="_blank" class="impl-card__link">Learn more &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE RESOURCE -->
+<section class="free-section" id="free">
+  <div class="free-inner inner">
+    <div>
+      <p class="eyebrow eyebrow--light">Free Resource</p>
+      <h2 class="section-title section-title--light">Not sure where<br><em>to start?</em></h2>
+      <p class="free-body">If you are not sure which service is the right fit, start with the free diagnostic or download the investment guide. Both will give you a clearer picture of where to put your focus before spending anything.</p>
+    </div>
+    <div class="free-card">
+      <div class="free-card__title">Check Your Alignment</div>
+      <div class="free-card__sub">Free &middot; Takes About 5 Minutes</div>
+      <p class="free-card__desc">A quick diagnostic that narrows your efforts to the actions that actually move inquiries and revenue. A read on what is helping versus what is noise in your current marketing.</p>
+      <a href="https://go.tychedigitalagency.net/clarity-pathway" target="_blank" class="btn--camel">Start the Free Diagnostic &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO START -->
+<section class="start-section">
+  <div class="inner">
+    <p class="eyebrow">How to Get Started</p>
+    <h2 class="section-title">Three clear<br><em>entry points</em></h2>
+    <div class="start-grid">
+      <div class="start-step">
+        <div class="start-step__num">01</div>
+        <div class="start-step__title">Not sure what is wrong</div>
+        <p class="start-step__desc">Start with Check Your Alignment, the free diagnostic, or book a Direction Session. Either will surface the structural issue faster than any tactic you could add.</p>
+        <a href="https://go.tychedigitalagency.net/clarity-pathway" target="_blank" class="start-step__link">Check Your Alignment (free) &rarr;</a>
+      </div>
+      <div class="start-step">
+        <div class="start-step__num">02</div>
+        <div class="start-step__title">Have clarity, need execution</div>
+        <p class="start-step__desc">If you know what needs to be built and want Tyche to build it, book a call and we will scope the engagement. All implementation starts with a brief diagnostic to confirm direction.</p>
+        <a href="tyche-book.html" class="start-step__link">Book a strategy call &rarr;</a>
+      </div>
+      <div class="start-step">
+        <div class="start-step__num">03</div>
+        <div class="start-step__title">Not sure which fits</div>
+        <p class="start-step__desc">Download the investment guide to see all services, pricing, and the right entry point based on your current stage. No email required to access it.</p>
+        <a href="https://go.tychedigitalagency.net/investment-guide" target="_blank" class="start-step__link">Download the guide &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <p class="eyebrow eyebrow--light" style="justify-content:center">Ready to Move Forward</p>
+    <h2 class="cta-h2">Start with a<br><em>Direction Session.</em></h2>
+    <p class="cta-sub">60 minutes. A diagnostic read on your business. Clear next moves you can act on that same day, whether you work with us after or not.</p>
+    <a href="tyche-book.html" class="btn--ivory">Book Your Strategy Call</a>
+    <p class="cta-note">No pitch. No pressure. Just clarity.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div><div class="footer__logo"><img src="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/693b11a65b7f645e8fd3a4ef.png" alt="Tyche Digital Agency"></div><p class="footer__desc">Marketing systems for service businesses that want leads without manufacturing momentum every week.</p></div>
+    <div class="footer-col"><h4>Work Together</h4><a href="https://go.tychedigitalagency.net/the-direction-session" target="_blank">Direction Session</a><a href="https://go.tychedigitalagency.net/clarity-pathway" target="_blank">Check Alignment</a><a href="https://go.tychedigitalagency.net/done-for-you-support" target="_blank">Done-For-You</a><a href="tyche-book.html">Book a Call</a></div>
+    <div class="footer-col"><h4>Resources</h4><a href="https://tychedigitalagency.blogspot.com/" target="_blank">The Direction Journal</a><a href="tyche-faq.html">FAQ</a><a href="https://go.veronicadietz.com/magnetic-messaging-mini-guide-2200" target="_blank">Magnetic Messaging</a><a href="https://go.tychedigitalagency.net/investment-guide" target="_blank">Investment Guide</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="tyche-about.html">About Veronica</a><a href="https://share.google/3Jh5pTQkHRGIj3X5I" target="_blank">VD Advisory Group</a><a href="https://go.tychedigitalagency.net/contact" target="_blank">Contact</a><a href="https://go.tychedigitalagency.net/privacy-policy" target="_blank">Privacy Policy</a><a href="https://go.tychedigitalagency.net/terms-and-conditions" target="_blank">Terms</a></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Tyche Digital Agency &middot; Founded by <a href="https://share.google/3Jh5pTQkHRGIj3X5I" target="_blank">Veronica Dietz</a></span><a href="https://go.tychedigitalagency.net/terms-and-conditions" target="_blank">Terms</a></div>
+</footer>
+
+</body>
+</html>

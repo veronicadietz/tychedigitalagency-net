@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Veronica Dietz | Tyche Digital Agency</title>
+<meta name="description" content="Tyche Digital Agency was founded by Veronica Dietz, a marketing strategist with 20 years of experience helping service businesses build systems that convert.">
+<link rel="icon" href="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/695ea829a0a48408c7196071.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ivory:#F8F5F0;--ivory-dark:#F0EBE3;--navy:#0A1F44;
+  --brown:#7C5C3B;--olive:#3E4D3A;--camel:#D1C4A7;
+  --camel-mid:#B8A98A;--camel-light:#EDE5D4;
+  --ink:#1A1610;--mid:#6B6156;--light:#9A9088;
+  --border-camel:rgba(184,169,138,0.40);
+  --serif-h:'Playfair Display',Georgia,serif;
+  --serif-b:'Libre Baskerville',Georgia,serif;
+  --sans:'Raleway',system-ui,sans-serif;
+  --max:1180px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ivory);color:var(--ink);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.nav{position:sticky;top:0;z-index:200;background:rgba(248,245,240,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border-camel);height:72px;display:flex;align-items:center;padding:0 5vw;justify-content:space-between}
+.nav__logo img{height:40px;width:auto}
+.nav__links{display:flex;align-items:center;gap:36px;list-style:none}
+.nav__links a{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);transition:color .2s}
+.nav__links a:hover,.nav__links a.active{color:var(--navy)}
+.nav__cta{background:var(--navy)!important;color:var(--ivory)!important;padding:10px 26px!important;font-size:10px!important;font-weight:600!important;letter-spacing:.14em!important;text-transform:uppercase!important;transition:background .25s!important}
+.nav__cta:hover{background:var(--olive)!important;color:var(--ivory)!important}
+.eyebrow{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:var(--brown);display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.eyebrow::before{content:'';display:inline-block;width:28px;height:1px;background:var(--camel-mid);flex-shrink:0}
+.eyebrow--light{color:rgba(209,196,167,.55)}
+.eyebrow--light::before{background:rgba(209,196,167,.35)}
+.section-title{font-family:var(--serif-h);font-size:clamp(34px,3.8vw,54px);font-weight:400;line-height:1.1;letter-spacing:-.015em;color:var(--navy);margin-bottom:20px}
+.section-title em{font-style:italic;color:var(--brown)}
+.section-title--light{color:var(--ivory)}
+.section-title--light em{color:var(--camel)}
+.btn--primary{background:var(--navy);color:var(--ivory);padding:15px 40px;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:background .25s;display:inline-block}
+.btn--primary:hover{background:var(--olive);color:var(--ivory)}
+.btn--ivory{display:inline-block;background:var(--ivory);color:var(--navy);padding:18px 52px;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:opacity .2s}
+.btn--ivory:hover{opacity:.88;color:var(--navy)}
+.btn--ghost-dark{font-family:var(--serif-h);font-style:italic;font-size:17px;color:var(--brown);border-bottom:1px solid var(--border-camel);padding-bottom:3px;transition:color .2s,border-color .2s}
+.btn--ghost-dark:hover{color:var(--navy);border-color:var(--camel-mid)}
+.page-header{background:var(--navy);padding:100px 5vw 80px;position:relative;overflow:hidden;border-bottom:3px solid var(--camel-mid)}
+.page-header::before{content:'*';position:absolute;top:50%;right:8vw;transform:translateY(-50%);font-size:420px;line-height:1;color:rgba(209,196,167,.04);pointer-events:none}
+.page-header__inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+.page-header__eyebrow{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:rgba(209,196,167,.5);display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.page-header__eyebrow::before{content:'';display:inline-block;width:28px;height:1px;background:rgba(209,196,167,.35);flex-shrink:0}
+.page-header__h1{font-family:var(--serif-h);font-size:clamp(42px,5.5vw,74px);font-weight:400;line-height:1.08;color:var(--ivory);letter-spacing:-.02em;max-width:700px}
+.page-header__h1 em{font-style:italic;color:var(--camel)}
+.page-header__sub{font-family:var(--serif-b);font-size:18px;font-style:italic;color:rgba(248,245,240,.5);line-height:1.85;max-width:540px;margin-top:24px}
+.about-intro{display:grid;grid-template-columns:44% 56%;min-height:700px}
+.about-intro__img-col{position:relative;overflow:hidden;background:var(--navy)}
+.about-intro__img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:sepia(10%) contrast(1.08)}
+.about-intro__content{background:var(--ivory);padding:80px 72px;display:flex;flex-direction:column;justify-content:center}
+.about-intro__lead{font-family:var(--serif-h);font-size:24px;font-weight:400;font-style:italic;color:var(--navy);line-height:1.55;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--border-camel)}
+.about-intro__body{font-family:var(--serif-b);font-size:16px;color:var(--mid);line-height:1.95;margin-bottom:20px}
+.about-intro__cta{margin-top:40px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.creds-bar{background:var(--navy);padding:72px 5vw}
+.creds-bar__inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(209,196,167,.1)}
+.cred-item{padding:40px 36px;background:var(--navy)}
+.cred-item__num{font-family:var(--serif-h);font-size:44px;font-weight:400;color:var(--ivory);line-height:1;margin-bottom:10px}
+.cred-item__label{font-family:var(--sans);font-size:11px;letter-spacing:.06em;color:rgba(209,196,167,.4);line-height:1.55}
+.section{padding:110px 5vw}
+.inner{max-width:var(--max);margin:0 auto}
+.difference-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.difference-list{margin-top:40px}
+.diff-item{display:flex;gap:24px;padding:28px 0;border-bottom:1px solid var(--border-camel)}
+.diff-item:first-child{border-top:1px solid var(--border-camel)}
+.diff-dot{flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--camel-mid);margin-top:11px}
+.diff-title{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:.02em;color:var(--navy);margin-bottom:6px}
+.diff-body{font-family:var(--serif-b);font-size:14px;font-style:italic;color:var(--mid);line-height:1.7}
+.difference-pull{font-family:var(--serif-h);font-size:26px;font-style:italic;font-weight:400;color:var(--navy);line-height:1.55;border-left:2px solid var(--camel-mid);padding-left:28px;margin-top:40px}
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:56px}
+.fit-card{padding:44px 40px;border:1px solid var(--border-camel)}
+.fit-card--yes{background:var(--ivory)}
+.fit-card--no{background:var(--camel-light)}
+.fit-card__label{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border-camel)}
+.fit-card--yes .fit-card__label{color:var(--olive)}
+.fit-card--no .fit-card__label{color:var(--brown)}
+.fit-list{list-style:none}
+.fit-list li{font-family:var(--serif-b);font-size:15px;font-style:italic;color:var(--mid);padding:10px 0;border-bottom:1px solid var(--border-camel);display:flex;gap:14px;line-height:1.6}
+.fit-list li:last-child{border-bottom:none}
+.fit-card--yes .fit-list li::before{content:'\2713';color:var(--olive);flex-shrink:0}
+.fit-card--no .fit-list li::before{content:'\2715';color:var(--brown);flex-shrink:0}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border-camel);overflow:hidden;margin-top:64px}
+.value-card{padding:52px 40px;border-right:1px solid var(--border-camel);background:var(--ivory);transition:background .3s}
+.value-card:last-child{border-right:none}
+.value-card:hover{background:var(--camel-light)}
+.value-num{font-family:var(--serif-h);font-size:56px;font-weight:400;color:var(--border-camel);line-height:1;margin-bottom:20px}
+.value-title{font-family:var(--serif-h);font-size:22px;font-weight:400;color:var(--navy);margin-bottom:14px;line-height:1.2}
+.value-body{font-family:var(--serif-b);font-size:14px;font-style:italic;color:var(--mid);line-height:1.85}
+.cta-section{background:var(--navy);padding:120px 5vw;text-align:center;position:relative;overflow:hidden}
+.cta-section::after{content:'';position:absolute;top:0;left:5vw;right:5vw;height:1px;background:linear-gradient(to right,transparent,rgba(209,196,167,.3),transparent)}
+.cta-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.cta-h2{font-family:var(--serif-h);font-size:clamp(38px,5vw,64px);font-weight:400;line-height:1.1;color:var(--ivory);margin-bottom:24px;letter-spacing:-.015em}
+.cta-h2 em{font-style:italic;color:var(--camel)}
+.cta-sub{font-family:var(--serif-b);font-size:17px;font-style:italic;color:rgba(248,245,240,.45);line-height:1.9;margin-bottom:52px;max-width:440px;margin-left:auto;margin-right:auto}
+.cta-note{margin-top:22px;font-family:var(--serif-h);font-size:15px;font-style:italic;color:rgba(248,245,240,.22)}
+.footer{background:#070d1a;padding:88px 5vw 48px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:64px;margin-bottom:72px;padding-bottom:64px;border-bottom:1px solid rgba(209,196,167,.06)}
+.footer__logo img{height:34px;opacity:.65;margin-bottom:28px}
+.footer__desc{font-family:var(--serif-b);font-size:14px;font-style:italic;color:rgba(209,196,167,.25);line-height:1.9;max-width:240px}
+.footer-col h4{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:rgba(209,196,167,.2);margin-bottom:24px}
+.footer-col a{display:block;font-family:var(--sans);font-size:13px;font-weight:300;color:rgba(248,245,240,.35);padding:6px 0;transition:color .2s}
+.footer-col a:hover{color:rgba(248,245,240,.8)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:11px;color:rgba(248,245,240,.15)}
+.footer-bottom a{color:rgba(248,245,240,.2)}
+@media(max-width:1024px){
+  .about-intro,.difference-grid,.fit-grid{grid-template-columns:1fr}
+  .about-intro__img-col{height:65vw}
+  .about-intro__content{padding:56px 40px}
+  .values-grid{grid-template-columns:1fr}
+  .value-card{border-right:none;border-bottom:1px solid var(--border-camel)}
+  .value-card:last-child{border-bottom:none}
+  .creds-bar__inner{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .nav__links{display:none}
+}
+@media(max-width:600px){
+  .creds-bar__inner,.footer-top{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="tyche-home.html"><img src="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/693b11a65b7f645e8fd3a4ef.png" alt="Tyche Digital Agency" style="height:40px"></a>
+  <ul class="nav__links">
+    <li><a href="tyche-home.html#services">Services</a></li>
+    <li><a href="tyche-about.html" class="active">About</a></li>
+    <li><a href="tyche-home.html#process">Our Process</a></li>
+    <li><a href="https://tychedigitalagency.blogspot.com/" target="_blank">Journal</a></li>
+    <li><a href="tyche-faq.html">FAQ</a></li>
+    <li><a href="https://go.tychedigitalagency.net/contact" target="_blank" class="nav__cta">Book a Call</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <div class="page-header__inner">
+    <p class="page-header__eyebrow">Tyche Digital Agency</p>
+    <h1 class="page-header__h1">Built for founders who are<br><em>ready for real growth.</em></h1>
+    <p class="page-header__sub">Not tactics. Not quick fixes. A system that actually works, built by someone who has spent 20 years figuring out why most of them don't.</p>
+  </div>
+</header>
+
+<div class="about-intro">
+  <div class="about-intro__img-col">
+    <img class="about-intro__img" src="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/6902a1cf12e9016158034656.jpeg" alt="Veronica Dietz, Founder of Tyche Digital Agency">
+  </div>
+  <div class="about-intro__content">
+    <p class="eyebrow">Veronica Dietz, Founder</p>
+    <h2 class="section-title">20 years in.<br><em>Still diagnostic first.</em></h2>
+    <p class="about-intro__lead">I did not set out to run a marketing agency. I set out to solve a problem that kept showing up in every business I worked with: the marketing was busy, but it wasn't converting.</p>
+    <p class="about-intro__body">I spent two decades in sales, marketing, and brand strategy, working with Fortune 500 companies and bootstrapped founders alike. What I found consistently: most marketing problems are structure problems wearing content costumes. The issue is almost never the content. It is the architecture underneath it.</p>
+    <p class="about-intro__body">I built Tyche to fix the structural issue, not layer more tactics on top of it. Every business has a load-bearing issue, the one problem generating most of the downstream drag. That issue is always findable. It is almost always fixable. And once it is fixed, everything else works harder with less effort from you.</p>
+    <div class="about-intro__cta">
+      <a href="https://go.tychedigitalagency.net/contact" target="_blank" class="btn--primary">Book a Strategy Call</a>
+      <a href="https://go.tychedigitalagency.net/the-direction-session" target="_blank" class="btn--ghost-dark">Start with a Direction Session</a>
+    </div>
+  </div>
+</div>
+
+<div class="creds-bar">
+  <div class="creds-bar__inner">
+    <div class="cred-item"><div class="cred-item__num">20+</div><div class="cred-item__label">Years in marketing and brand strategy</div></div>
+    <div class="cred-item"><div class="cred-item__num">10 yrs</div><div class="cred-item__label">Running Tyche Digital Agency</div></div>
+    <div class="cred-item"><div class="cred-item__num">F500</div><div class="cred-item__label">to bootstrapped clients served</div></div>
+    <div class="cred-item"><div class="cred-item__num">1</div><div class="cred-item__label">Load-bearing issue most businesses actually need fixed</div></div>
+  </div>
+</div>
+
+<section class="section" style="background:var(--ivory-dark)">
+  <div class="inner">
+    <div class="difference-grid">
+      <div>
+        <p class="eyebrow">The Tyche Difference</p>
+        <h2 class="section-title">This is for business owners<br>ready to stop <em>guessing.</em></h2>
+        <p style="font-family:var(--serif-b);font-size:16px;color:var(--mid);line-height:1.9;max-width:460px">Tyche works with founders who are done piecing together tactics and ready for a marketing system that actually supports growth. This is not about louder marketing. It is about building a business that finally works with you.</p>
+        <blockquote class="difference-pull">If something feels heavy, scattered, or harder than it should be, that is not a hustle problem. It is a structure problem.</blockquote>
+      </div>
+      <div>
+        <div class="difference-list">
+          <div class="diff-item"><div class="diff-dot"></div><div><div class="diff-title">Diagnostic before prescriptive</div><div class="diff-body">We find what is actually wrong before recommending anything. Most agencies skip this step entirely.</div></div></div>
+          <div class="diff-item"><div class="diff-dot"></div><div><div class="diff-title">Structure over surface</div><div class="diff-body">We fix the architecture underneath your marketing, not just the content on top of it.</div></div></div>
+          <div class="diff-item"><div class="diff-dot"></div><div><div class="diff-title">Clarity before execution</div><div class="diff-body">We don't build anything until we know exactly what needs to be built and why.</div></div></div>
+          <div class="diff-item"><div class="diff-dot"></div><div><div class="diff-title">Systems that compound</div><div class="diff-body">We build infrastructure that works when you are not pushing it, not just when you are.</div></div></div>
+          <div class="diff-item"><div class="diff-dot"></div><div><div class="diff-title">No dependency created</div><div class="diff-body">We hand off. You own it. The goal is a business that works without us in the room.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--camel-light)">
+  <div class="inner">
+    <p class="eyebrow">Who This Is For</p>
+    <h2 class="section-title">Good fit. <em>Not a fit.</em></h2>
+    <p style="font-family:var(--serif-b);font-size:17px;color:var(--mid);line-height:1.9;max-width:520px">We work with a specific kind of business owner. Being honest about fit saves everyone time.</p>
+    <div class="fit-grid">
+      <div class="fit-card fit-card--yes">
+        <p class="fit-card__label">This is for you if</p>
+        <ul class="fit-list">
+          <li>Your business is real but the structure feels fragile</li>
+          <li>You are tired of patching things together</li>
+          <li>You want steady growth, not constant reaction</li>
+          <li>You value thoughtful execution over quick fixes</li>
+          <li>You are ready to invest in a system, not just a tactic</li>
+          <li>You want to understand what is wrong before spending more</li>
+        </ul>
+      </div>
+      <div class="fit-card fit-card--no">
+        <p class="fit-card__label">This is not for you if</p>
+        <ul class="fit-list">
+          <li>You are looking for quick hacks or cheap execution</li>
+          <li>You want someone to just post on social media for you</li>
+          <li>You are not ready to look honestly at what is not working</li>
+          <li>You want a yes-person rather than a strategic partner</li>
+          <li>You need results in the next 72 hours</li>
+          <li>You are not willing to invest in structure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--ivory)">
+  <div class="inner">
+    <p class="eyebrow">How We Work</p>
+    <h2 class="section-title">The principles behind<br><em>every engagement</em></h2>
+    <div class="values-grid">
+      <div class="value-card"><div class="value-num">01</div><div class="value-title">Diagnosis before prescription</div><p class="value-body">We spend real time understanding your business before recommending anything. The load-bearing issue is often not what it looks like on the surface.</p></div>
+      <div class="value-card"><div class="value-num">02</div><div class="value-title">Clarity is the product</div><p class="value-body">Every engagement ends with a clearer picture than you started with. Even when we are building, the goal is always resolution, not ongoing dependence.</p></div>
+      <div class="value-card"><div class="value-num">03</div><div class="value-title">Structure over speed</div><p class="value-body">We build things that work over time, not just in the moment. A marketing system that compounds is worth more than a campaign that spikes and disappears.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner">
+    <p class="eyebrow eyebrow--light" style="justify-content:center">Work With Tyche</p>
+    <h2 class="cta-h2">Ready to find<br>what is <em>actually wrong?</em></h2>
+    <p class="cta-sub">Start with a Direction Session. 60 minutes. A diagnostic read on your business. Clear next moves whether you work with us or not.</p>
+    <a href="https://go.tychedigitalagency.net/the-direction-session" target="_blank" class="btn--ivory">Book a Direction Session</a>
+    <p class="cta-note">Or <a href="https://go.tychedigitalagency.net/contact" target="_blank" style="border-bottom:1px solid rgba(248,245,240,.2);padding-bottom:2px;color:rgba(248,245,240,.4)">reach out directly</a> if you are not sure where to start.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div><div class="footer__logo"><img src="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/693b11a65b7f645e8fd3a4ef.png" alt="Tyche Digital Agency"></div><p class="footer__desc">Marketing systems for service businesses that want leads without manufacturing momentum every week.</p></div>
+    <div class="footer-col"><h4>Work Together</h4><a href="https://go.tychedigitalagency.net/the-direction-session" target="_blank">Direction Session</a><a href="https://go.tychedigitalagency.net/clarity-pathway" target="_blank">Check Alignment</a><a href="https://go.tychedigitalagency.net/done-for-you-support" target="_blank">Done-For-You</a><a href="https://go.tychedigitalagency.net/contact" target="_blank">Book a Call</a></div>
+    <div class="footer-col"><h4>Resources</h4><a href="https://tychedigitalagency.blogspot.com/" target="_blank">The Direction Journal</a><a href="tyche-faq.html">FAQ</a><a href="https://go.veronicadietz.com/magnetic-messaging-mini-guide-2200" target="_blank">Magnetic Messaging</a><a href="https://go.tychedigitalagency.net/investment-guide" target="_blank">Investment Guide</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="tyche-about.html">About Veronica</a><a href="https://share.google/3Jh5pTQkHRGIj3X5I" target="_blank">VD Advisory Group</a><a href="https://go.tychedigitalagency.net/contact" target="_blank">Contact</a><a href="https://go.tychedigitalagency.net/privacy-policy" target="_blank">Privacy Policy</a><a href="https://go.tychedigitalagency.net/terms-and-conditions" target="_blank">Terms</a></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Tyche Digital Agency &middot; Founded by <a href="https://share.google/3Jh5pTQkHRGIj3X5I" target="_blank">Veronica Dietz</a></span><a href="https://go.tychedigitalagency.net/terms-and-conditions" target="_blank">Terms</a></div>
+</footer>
+</body>
+</html>
