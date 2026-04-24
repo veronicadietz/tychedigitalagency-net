@@ -1,385 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tyche Digital Agency | Marketing Systems for Service Businesses</title>
-<meta name="description" content="Tyche Digital Agency builds marketing systems for service businesses. Find your path: Free Strategy Call, Direction Session, or Check Your Alignment.">
-<link rel="icon" href="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/695ea829a0a48408c7196071.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --ivory:#F8F5F0;--ivory-dark:#F0EBE3;--navy:#0A1F44;
-  --brown:#7C5C3B;--olive:#3E4D3A;--camel:#D1C4A7;
-  --camel-mid:#B8A98A;--camel-light:#EDE5D4;
-  --ink:#1A1610;--mid:#6B6156;--light:#9A9088;
-  --border-camel:rgba(184,169,138,0.40);
-  --serif-h:'Playfair Display',Georgia,serif;
-  --serif-b:'Libre Baskerville',Georgia,serif;
-  --sans:'Raleway',system-ui,sans-serif;
-  --max:1140px;
-}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--ivory);color:var(--ink);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tyche Digital Agency. Marketing systems for service businesses. We find what is structurally wrong and fix it, or build the system that should have been there from the start.">
+  <meta name="author" content="Tyche Digital Agency · Founded by Veronica Dietz">
+  <title>Tyche Digital Agency · Marketing Systems for Service Businesses</title>
 
-/* NAV */
-.nav{position:sticky;top:0;z-index:200;background:rgba(248,245,240,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border-camel);height:72px;display:flex;align-items:center;padding:0 5vw;justify-content:space-between}
-.nav__logo img{height:40px;width:auto}
-.nav__links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav__links a{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);transition:color .2s}
-.nav__links a:hover,.nav__links a.active{color:var(--navy)}
-.nav__cta{background:var(--navy)!important;color:var(--ivory)!important;padding:10px 24px!important;font-size:10px!important;font-weight:600!important;letter-spacing:.14em!important;text-transform:uppercase!important;transition:background .25s!important}
-.nav__cta:hover{background:var(--olive)!important;color:var(--ivory)!important}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-/* FOOTER -- light, mirrors nav */
-.footer{background:var(--ivory-dark);border-top:1px solid var(--border-camel);padding:72px 5vw 40px}
-.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:56px;padding-bottom:56px;border-bottom:1px solid var(--border-camel)}
-.footer__logo img{height:44px;opacity:1;margin-bottom:20px}
-.footer__desc{font-family:var(--serif-b);font-size:13px;font-style:italic;color:var(--mid);line-height:1.9;max-width:240px}
-.footer-col h4{font-family:var(--sans);font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--light);margin-bottom:18px}
-.footer-col a{display:block;font-family:var(--sans);font-size:13px;font-weight:400;color:var(--mid);padding:5px 0;transition:color .2s}
-.footer-col a:hover{color:var(--navy)}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:11px;color:var(--light);letter-spacing:.03em}
-.footer-bottom a{color:var(--mid);transition:color .2s}
-.footer-bottom a:hover{color:var(--navy)}
-
-/* SHARED COMPONENTS */
-.eyebrow{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:var(--brown);display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.eyebrow::before{content:'';display:inline-block;width:24px;height:1px;background:var(--camel-mid);flex-shrink:0}
-.eyebrow--light{color:rgba(209,196,167,.6)}
-.eyebrow--light::before{background:rgba(209,196,167,.4)}
-.eyebrow--center{justify-content:center}
-.eyebrow--center::before,.eyebrow--center::after{content:'';display:inline-block;width:24px;height:1px;background:var(--camel-mid)}
-.section-title{font-family:var(--serif-h);font-size:clamp(32px,3.8vw,52px);font-weight:400;line-height:1.1;letter-spacing:-.015em;color:var(--navy);margin-bottom:18px}
-.section-title em{font-style:italic;color:var(--brown)}
-.section-title--light{color:var(--ivory)}
-.section-title--light em{color:var(--camel)}
-.section-body{font-family:var(--serif-b);font-size:16px;color:var(--mid);line-height:1.95}
-.section-body p+p{margin-top:14px}
-.inner{max-width:var(--max);margin:0 auto}
-
-/* BUTTONS */
-.btn{display:inline-block;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:14px 36px;transition:background .25s,opacity .2s}
-.btn--navy{background:var(--navy);color:var(--ivory)}
-.btn--navy:hover{background:var(--olive);color:var(--ivory)}
-.btn--ivory{background:var(--ivory);color:var(--navy)}
-.btn--ivory:hover{opacity:.88;color:var(--navy)}
-.btn--outline{background:transparent;color:var(--navy);border:1px solid var(--border-camel)}
-.btn--outline:hover{background:var(--camel-light);color:var(--navy)}
-.btn--outline-light{background:transparent;color:var(--camel);border:1px solid rgba(209,196,167,.3)}
-.btn--outline-light:hover{background:rgba(209,196,167,.08);color:var(--camel)}
-.btn--ghost{font-family:var(--serif-h);font-style:italic;font-size:17px;color:var(--brown);border-bottom:1px solid var(--border-camel);padding:0 0 3px;background:transparent;transition:color .2s,border-color .2s}
-.btn--ghost:hover{color:var(--navy);border-color:var(--camel-mid)}
-
-/* SECTION BG VARIANTS */
-.bg-ivory{background:var(--ivory)}
-.bg-ivory-dark{background:var(--ivory-dark)}
-.bg-camel{background:var(--camel-light)}
-.bg-navy{background:var(--navy)}
-.bg-olive{background:var(--olive)}
-
-/* OFFER PILLS -- used sitewide to label the three offers */
-.offer-pill{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 14px;border-radius:1px}
-.offer-pill--free{background:rgba(62,77,58,.1);color:var(--olive);border:1px solid rgba(62,77,58,.2)}
-.offer-pill--paid{background:rgba(10,31,68,.08);color:var(--navy);border:1px solid rgba(10,31,68,.15)}
-.offer-pill--dfy{background:rgba(124,92,59,.08);color:var(--brown);border:1px solid rgba(124,92,59,.2)}
-
-@media(max-width:1024px){
-  .footer-top{grid-template-columns:1fr 1fr;gap:40px}
-  .nav__links{display:none}
-}
-@media(max-width:600px){.footer-top{grid-template-columns:1fr}}
-
-/* HERO */
-.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding:12vh 5vw 10vh;position:relative;overflow:hidden;border-bottom:1px solid var(--border-camel)}
-.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,var(--camel-mid),transparent);opacity:.6}
-.hero__inner{max-width:var(--max);margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:end}
-.hero__left{padding-right:8vw;border-right:1px solid var(--border-camel);padding-bottom:64px}
-.hero__right{padding-left:6vw;padding-bottom:64px}
-.hero__eyebrow{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:var(--camel-mid);display:flex;align-items:center;gap:14px;margin-bottom:28px}
-.hero__eyebrow::before{content:'';display:inline-block;width:28px;height:1px;background:var(--camel-mid);flex-shrink:0}
-.hero__h1{font-family:var(--serif-h);font-size:clamp(46px,5.5vw,80px);font-weight:400;line-height:1.05;color:var(--navy);letter-spacing:-.02em;margin-bottom:0}
-.hero__h1 em{font-style:italic;color:var(--brown)}
-.hero__ornament{display:flex;align-items:center;gap:16px;margin:40px 0}
-.hero__ornament-line{flex:1;height:1px;background:var(--border-camel)}
-.hero__ornament-mark{font-size:10px;color:var(--camel-mid)}
-.hero__sub{font-family:var(--serif-b);font-size:17px;font-style:italic;color:var(--mid);line-height:1.85;max-width:400px;margin-bottom:48px}
-.hero__actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-.hero__statement{font-family:var(--serif-h);font-size:16px;line-height:1.9;color:var(--mid);margin-bottom:44px;padding-bottom:44px;border-bottom:1px solid var(--border-camel)}
-.hero__statement strong{color:var(--navy);font-weight:500;display:block;font-size:18px;margin-bottom:10px;font-style:italic}
-.hero__metrics{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.metric__num{font-family:var(--serif-h);font-size:38px;font-weight:400;color:var(--navy);line-height:1;margin-bottom:6px}
-.metric__label{font-size:11px;color:var(--light);line-height:1.5}
-
-/* TICKER */
-.ticker{background:var(--navy);padding:14px 0;overflow:hidden;white-space:nowrap}
-.ticker__track{display:inline-flex;animation:ticker 32s linear infinite}
-.ticker__item{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(209,196,167,.4);padding:0 28px}
-.ticker__sep{color:rgba(209,196,167,.15);padding:0 4px}
-@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* THREE PATHS */
-.paths{padding:96px 5vw;background:var(--ivory)}
-.paths__inner{max-width:var(--max);margin:0 auto}
-.paths__header{text-align:center;margin-bottom:64px}
-.paths__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-camel);border:1px solid var(--border-camel);overflow:hidden}
-.path-card{background:var(--ivory);padding:52px 40px;transition:background .3s;position:relative;overflow:hidden;display:flex;flex-direction:column}
-.path-card:hover{background:var(--camel-light)}
-.path-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transform-origin:left;transition:transform .35s}
-.path-card--free::before{background:var(--olive)}
-.path-card--paid::before{background:var(--navy)}
-.path-card--dfy::before{background:var(--brown)}
-.path-card:hover::before{transform:scaleX(1)}
-.path-card__pill{margin-bottom:24px}
-.path-card__title{font-family:var(--serif-h);font-size:28px;font-weight:400;color:var(--navy);margin-bottom:8px;line-height:1.2}
-.path-card__price{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-bottom:20px}
-.path-card__desc{font-family:var(--serif-b);font-size:14px;font-style:italic;color:var(--mid);line-height:1.8;margin-bottom:36px;flex:1}
-.path-card__link{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--border-camel);padding-bottom:3px;display:inline-flex;align-items:center;gap:8px;transition:gap .2s,color .2s,border-color .2s}
-.path-card:hover .path-card__link{gap:14px;color:var(--brown);border-color:var(--camel-mid)}
-
-/* PROBLEM */
-.problem{padding:96px 5vw;background:var(--camel-light);border-top:1px solid var(--border-camel)}
-.problem__inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
-.problem__image{position:relative}
-.problem__img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 20%;filter:sepia(15%) contrast(1.06)}
-.problem__image::after{content:'';position:absolute;bottom:-20px;right:-20px;width:100%;height:100%;border:1px solid var(--camel-mid);z-index:-1}
-.problem__pull{font-family:var(--serif-h);font-size:22px;font-style:italic;color:var(--navy);line-height:1.55;border-left:2px solid var(--camel-mid);padding-left:24px;margin:36px 0}
-.symptom-list{margin-top:36px}
-.symptom{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--border-camel)}
-.symptom:first-child{border-top:1px solid var(--border-camel)}
-.symptom__dot{flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--camel-mid);margin-top:10px}
-.symptom__title{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px;letter-spacing:.01em}
-.symptom__desc{font-family:var(--serif-b);font-size:13px;font-style:italic;color:var(--mid);line-height:1.65}
-
-/* PROOF */
-.proof{padding:96px 5vw;background:var(--ivory)}
-.proof__inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.testimonial{background:var(--ivory-dark);border:1px solid var(--border-camel);padding:48px 44px}
-.testimonial__mark{font-family:var(--serif-h);font-size:72px;font-weight:400;color:var(--camel);line-height:.7;margin-bottom:20px;opacity:.7}
-.testimonial__text{font-family:var(--serif-h);font-size:20px;font-style:italic;color:var(--navy);line-height:1.65;margin-bottom:28px}
-.testimonial__attr{font-family:var(--sans);font-size:11px;color:var(--mid)}
-.testimonial__attr strong{display:block;font-weight:600;color:var(--navy);font-size:13px;margin-bottom:2px}
-.proof__numbers{background:var(--navy);padding:48px 44px;display:flex;flex-direction:column;justify-content:space-between}
-.proof__stat{padding:20px 0;border-bottom:1px solid rgba(209,196,167,.1)}
-.proof__stat:first-child{padding-top:0}
-.proof__stat:last-child{border-bottom:none;padding-bottom:0}
-.proof__stat-num{font-family:var(--serif-h);font-size:40px;font-weight:400;color:var(--ivory);line-height:1;margin-bottom:6px}
-.proof__stat-desc{font-family:var(--serif-b);font-size:13px;font-style:italic;color:rgba(209,196,167,.45);line-height:1.6}
-
-/* CTA */
-.cta{background:var(--navy);padding:120px 5vw;text-align:center;position:relative;overflow:hidden}
-.cta::after{content:'';position:absolute;top:0;left:5vw;right:5vw;height:1px;background:linear-gradient(to right,transparent,rgba(209,196,167,.3),transparent)}
-.cta__inner{max-width:700px;margin:0 auto;position:relative;z-index:1}
-.cta__h2{font-family:var(--serif-h);font-size:clamp(36px,5vw,64px);font-weight:400;line-height:1.1;color:var(--ivory);margin-bottom:20px;letter-spacing:-.015em}
-.cta__h2 em{font-style:italic;color:var(--camel)}
-.cta__sub{font-family:var(--serif-b);font-size:17px;font-style:italic;color:rgba(248,245,240,.45);line-height:1.9;margin-bottom:48px;max-width:440px;margin-left:auto;margin-right:auto}
-.cta__options{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.cta__note{margin-top:24px;font-family:var(--serif-h);font-size:14px;font-style:italic;color:rgba(248,245,240,.2)}
-
-/* SEO BLOCK */
-.seo{padding:72px 5vw;background:var(--ivory-dark);border-top:1px solid var(--border-camel)}
-.seo__inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px}
-.seo h3{font-family:var(--serif-h);font-size:22px;font-weight:400;color:var(--navy);margin-bottom:14px}
-.seo p{font-family:var(--serif-b);font-size:14px;font-style:italic;color:var(--mid);line-height:1.9}
-.seo ul{list-style:none;margin-top:16px}
-.seo li{font-family:var(--serif-b);font-size:14px;font-style:italic;color:var(--mid);padding:8px 0;border-bottom:1px solid var(--border-camel);display:flex;gap:14px}
-.seo li::before{content:'\2192';color:var(--camel-mid);flex-shrink:0}
-
-@media(max-width:1024px){
-  .hero__inner{grid-template-columns:1fr}
-  .hero__left{border-right:none;padding-right:0;border-bottom:1px solid var(--border-camel);padding-bottom:48px;margin-bottom:48px}
-  .hero__right{padding-left:0}
-  .paths__grid{grid-template-columns:1fr}
-  .problem__inner,.proof__inner,.seo__inner{grid-template-columns:1fr;gap:40px}
-  .problem__image{max-width:500px}
-}
-</style>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-<nav class="nav">
-  <a href="/"><img src="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/693b11a65b7f645e8fd3a4ef.png" alt="Tyche Digital Agency" style="height:40px"></a>
-  <ul class="nav__links">
-    <li><a href="/services">Services</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/direction-session">Direction Session</a></li>
-    <li><a href="/faq">FAQ</a></li>
-    <li><a href="/alignment">Free Diagnostic</a></li>
-    <li><a href="/book" class="nav__cta">Free Strategy Call</a></li>
-  </ul>
+<!-- ===================================================================
+     NAVIGATION
+==================================================================== -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="Tyche Digital Agency home">
+      <svg class="nav__logo-mark" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M 12 2 L 14 10 L 22 12 L 14 14 L 12 22 L 10 14 L 2 12 L 10 10 Z"/>
+      </svg>
+      <span class="nav__logo-word">TYCHE</span>
+      <span class="nav__logo-tagline">Digital Agency</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://tychedigitalagency.com/direction-session/">Direction Session</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#tyche-touch">Tyche Touch</a></li>
+      <li><a href="https://tychedigitalagency.com/book/" class="nav__cta">Free Strategy Call</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="nav__mobile" hidden>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="https://tychedigitalagency.com/direction-session/">Direction Session</a>
+    <a href="#faq">FAQ</a>
+    <a href="#tyche-touch">Tyche Touch</a>
+    <a href="https://tychedigitalagency.com/book/" class="nav__cta">Free Strategy Call</a>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero bg-ivory">
-  <div class="hero__inner">
-    <div class="hero__left">
-      <p class="hero__eyebrow">Marketing Systems for Service Businesses</p>
-      <h1 class="hero__h1">Your marketing<br>is busy.<br><em>It just isn't<br>converting.</em></h1>
-      <div class="hero__ornament"><span class="hero__ornament-line"></span><span class="hero__ornament-mark">&#10022;</span><span class="hero__ornament-line"></span></div>
-      <p class="hero__sub">We find what is structurally wrong and fix it. Or we build the system that should have been there from the start.</p>
-      <div class="hero__actions">
-        <a href="/book" class="btn btn--navy">Book a Free Strategy Call</a>
-        <a href="/services" class="btn--ghost">Explore our work</a>
+<!-- ===================================================================
+     HERO · Cosmic
+==================================================================== -->
+<header class="hero" role="banner">
+  <!-- Cosmic background layers -->
+  <div class="cosmos cosmos--hero" aria-hidden="true">
+    <div class="cosmos__gradient"></div>
+    <div class="cosmos__nebula cosmos__nebula--1"></div>
+    <div class="cosmos__nebula cosmos__nebula--2"></div>
+    <div class="cosmos__nebula cosmos__nebula--3"></div>
+    <svg class="cosmos__stars" viewBox="0 0 1200 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+    <div class="cosmos__dust cosmos__dust--1"></div>
+    <div class="cosmos__dust cosmos__dust--2"></div>
+    <div class="cosmos__dust cosmos__dust--3"></div>
+    <div class="cosmos__dust cosmos__dust--4"></div>
+    <div class="cosmos__dust cosmos__dust--5"></div>
+    <div class="cosmos__dust cosmos__dust--6"></div>
+    <div class="cosmos__shooting" aria-hidden="true"></div>
+  </div>
+
+  <div class="hero__grid">
+    <!-- LEFT: Headline and copy -->
+    <div class="hero__copy">
+      <div class="kicker">
+        <span class="kicker__line"></span>
+        <span class="kicker__text">Marketing Systems for Service Businesses</span>
+      </div>
+
+      <h1 class="hero__headline">
+        Your marketing<br>is busy.
+      </h1>
+      <p class="hero__headline-italic">It just isn&rsquo;t converting.</p>
+
+      <div class="divider-ornament" aria-hidden="true">
+        <span class="divider-ornament__line"></span>
+        <svg width="10" height="10" viewBox="0 0 10 10"><path d="M 5 0 L 6 4 L 10 5 L 6 6 L 5 10 L 4 6 L 0 5 L 4 4 Z"/></svg>
+        <span class="divider-ornament__line"></span>
+      </div>
+
+      <p class="hero__lede">
+        We find what is structurally wrong and fix it. Or we build the system that should have been there from the start.
+      </p>
+
+      <div class="hero__ctas">
+        <a href="https://tychedigitalagency.com/book/" class="btn btn--primary">Book a Free Strategy Call</a>
+        <a href="#work" class="btn btn--text">Explore our work <span aria-hidden="true">→</span></a>
+      </div>
+
+      <dl class="stats">
+        <div class="stats__item">
+          <dt class="stats__value">20<span class="stats__plus">+</span></dt>
+          <dd class="stats__label">Years<br>experience</dd>
+        </div>
+        <div class="stats__item">
+          <dt class="stats__value">100s</dt>
+          <dd class="stats__label">Brands<br>served</dd>
+        </div>
+        <div class="stats__item">
+          <dt class="stats__value">F500</dt>
+          <dd class="stats__label">To boot-<br>strapped</dd>
+        </div>
+        <div class="stats__item">
+          <dt class="stats__value">10<span class="stats__plus">yr</span></dt>
+          <dd class="stats__label">Running<br>Tyche</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- RIGHT: Three service cards -->
+    <div class="hero__cards" aria-label="What we do">
+      <article class="service-card service-card--left">
+        <div class="service-card__inner">
+          <span class="service-card__numeral">— I —</span>
+          <svg class="service-card__icon service-card__icon--spin" width="56" height="56" viewBox="0 0 60 60" aria-hidden="true">
+            <circle cx="30" cy="30" r="24" fill="none" stroke="currentColor" stroke-width="0.6"/>
+            <circle cx="30" cy="30" r="17" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <circle cx="30" cy="30" r="10" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="30" cy="30" r="3.5" fill="#c4500a"/>
+            <line x1="30" y1="2" x2="30" y2="8" stroke="currentColor" stroke-width="0.6"/>
+            <line x1="30" y1="52" x2="30" y2="58" stroke="currentColor" stroke-width="0.6"/>
+            <line x1="2" y1="30" x2="8" y2="30" stroke="currentColor" stroke-width="0.6"/>
+            <line x1="52" y1="30" x2="58" y2="30" stroke="currentColor" stroke-width="0.6"/>
+          </svg>
+          <div class="service-card__text">
+            <h3 class="service-card__title">Positioning</h3>
+            <p class="service-card__subtitle">Be the only<br>obvious answer</p>
+          </div>
+          <span class="service-card__footer">The Signal</span>
+        </div>
+      </article>
+
+      <article class="service-card service-card--center">
+        <div class="service-card__inner">
+          <span class="service-card__numeral">— II —</span>
+          <div class="service-card__hero-icon">
+            <svg class="service-card__rays" width="130" height="130" viewBox="0 0 130 130" aria-hidden="true">
+              <g stroke="currentColor" stroke-width="0.4" opacity="0.5" fill="none">
+                <line x1="65" y1="8" x2="65" y2="20"/>
+                <line x1="65" y1="110" x2="65" y2="122"/>
+                <line x1="8" y1="65" x2="20" y2="65"/>
+                <line x1="110" y1="65" x2="122" y2="65"/>
+                <line x1="24" y1="24" x2="33" y2="33"/>
+                <line x1="97" y1="97" x2="106" y2="106"/>
+                <line x1="106" y1="24" x2="97" y2="33"/>
+                <line x1="33" y1="97" x2="24" y2="106"/>
+                <line x1="38" y1="14" x2="42" y2="22"/>
+                <line x1="88" y1="108" x2="92" y2="116"/>
+                <line x1="14" y1="38" x2="22" y2="42"/>
+                <line x1="108" y1="88" x2="116" y2="92"/>
+              </g>
+            </svg>
+            <svg class="service-card__moon" width="76" height="76" viewBox="0 0 90 90" aria-hidden="true">
+              <circle cx="45" cy="45" r="32" fill="none" stroke="currentColor" stroke-width="0.6"/>
+              <circle cx="45" cy="45" r="26" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.6"/>
+              <path d="M 45 22 A 23 23 0 1 0 45 68 A 18 23 0 1 1 45 22 Z" fill="#ead3c5"/>
+              <path d="M 52 42 L 54 48 L 60 48 L 55 52 L 57 58 L 52 54 L 47 58 L 49 52 L 44 48 L 50 48 Z" fill="#c4500a"/>
+            </svg>
+          </div>
+          <div class="service-card__text">
+            <h3 class="service-card__title service-card__title--large">Conversion</h3>
+            <p class="service-card__subtitle">Traffic with<br>somewhere to go</p>
+          </div>
+          <span class="service-card__footer">The Path</span>
+        </div>
+      </article>
+
+      <article class="service-card service-card--right">
+        <div class="service-card__inner">
+          <span class="service-card__numeral">— III —</span>
+          <svg class="service-card__icon service-card__icon--reverse" width="56" height="56" viewBox="0 0 60 60" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="30" cy="21" r="10" fill="none"/>
+              <circle cx="30" cy="21" r="5" fill="currentColor"/>
+            </g>
+            <g fill="none" stroke="#ead3c5" stroke-width="1.5" transform="translate(0 28)">
+              <circle cx="18" cy="14" r="6"/>
+              <line x1="24" y1="14" x2="44" y2="14"/>
+              <line x1="38" y1="14" x2="38" y2="20"/>
+              <line x1="42" y1="14" x2="42" y2="18"/>
+            </g>
+          </svg>
+          <div class="service-card__text">
+            <h3 class="service-card__title">Implementation</h3>
+            <p class="service-card__subtitle">Done-for-you,<br>end to end</p>
+          </div>
+          <span class="service-card__footer">The Build</span>
+        </div>
+      </article>
+
+      <!-- Scattered accents -->
+      <div class="accent accent--dice" aria-hidden="true">
+        <img src="assets/images/dice.png" alt="" class="accent__dice-img" width="110" height="140">
+      </div>
+      <div class="accent accent--star-1" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 30 30"><path d="M 15 2 L 18 11 L 28 12 L 20 18 L 23 28 L 15 22 L 7 28 L 10 18 L 2 12 L 12 11 Z" fill="#d4a95a"/></svg>
+      </div>
+      <div class="accent accent--star-2" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 30 30"><path d="M 15 2 L 18 11 L 28 12 L 20 18 L 23 28 L 15 22 L 7 28 L 10 18 L 2 12 L 12 11 Z" fill="#d4a95a"/></svg>
+      </div>
+      <div class="accent accent--diamond" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 32 32"><path d="M 16 4 L 26 16 L 16 28 L 6 16 Z" fill="#c4500a" opacity="0.85"/></svg>
       </div>
     </div>
-    <div class="hero__right">
-      <p class="hero__statement"><strong>Most founders don't have a marketing problem.</strong>They have a conversion problem. The gap between effort and results lives in the structure underneath your marketing, not the content on top of it. One load-bearing issue is generating most of the downstream drag. That issue is findable. It is fixable.</p>
-      <div class="hero__metrics">
-        <div><div class="metric__num">20+</div><div class="metric__label">Years in marketing and brand strategy</div></div>
-        <div><div class="metric__num">100s</div><div class="metric__label">Founders and service brands served</div></div>
-        <div><div class="metric__num">F500</div><div class="metric__label">to bootstrapped clients served</div></div>
-        <div><div class="metric__num">10 yrs</div><div class="metric__label">Running Tyche Digital Agency</div></div>
-      </div>
+  </div>
+
+  <!-- Services marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__star">✦</span><span>Marketing Strategy</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Conversion Architecture</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Direction Sessions</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Funnel Systems</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Positioning &amp; Messaging</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Lead Generation</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Done-For-You Implementation</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Business Strategy</span>
+      <span class="marquee__star">✦</span><span>Marketing Strategy</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Conversion Architecture</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Direction Sessions</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Funnel Systems</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Positioning &amp; Messaging</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Lead Generation</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Done-For-You Implementation</span>
+      <span class="marquee__star marquee__star--dim">✦</span><span>Business Strategy</span>
+    </div>
+  </div>
+
+  <!-- Intro context (formerly "most founders don't have a marketing problem" paragraph) -->
+  <div class="hero__context">
+    <div class="hero__context-inner">
+      <p class="hero__context-lede">Most founders don&rsquo;t have a marketing problem.</p>
+      <p class="hero__context-body">They have a conversion problem. The gap between effort and results lives in the structure underneath your marketing, not the content on top of it. One load-bearing issue is generating most of the downstream drag. That issue is findable. It is fixable.</p>
+    </div>
+  </div>
+</header>
+
+<!-- ===================================================================
+     SECTION · Three ways to work with Tyche
+==================================================================== -->
+<section class="section section--cream section--has-stars" id="services">
+  <!-- Floating gold star stickers -->
+  <img src="assets/images/star-big.png" alt="" class="floating-star floating-star--left-top" aria-hidden="true">
+  <img src="assets/images/star-small.png" alt="" class="floating-star floating-star--left-bottom" aria-hidden="true">
+  <img src="assets/images/star-big.png" alt="" class="floating-star floating-star--right-top" aria-hidden="true">
+  <img src="assets/images/star-small.png" alt="" class="floating-star floating-star--right-bottom" aria-hidden="true">
+
+  <div class="section__inner">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">— Three ways to work with Tyche —</span>
+      <h2 class="section-head__title">Start Where <em>You Are.</em></h2>
+      <p class="section-head__body">Each entry point is designed for a specific stage. Not sure which fits? The free diagnostic takes five minutes and tells you exactly where to start.</p>
+    </div>
+
+    <div class="offer-grid">
+      <article class="offer-card">
+        <span class="offer-card__tag">Free</span>
+        <h3 class="offer-card__title">Check Your Alignment</h3>
+        <p class="offer-card__meta">Free diagnostic · 5 minutes</p>
+        <p class="offer-card__body">Not sure what is wrong or where to start? This free diagnostic narrows your focus to the actions that actually move revenue right now. You receive a PDF by email. No sales call required.</p>
+        <a href="https://tychedigitalagency.com/alignment/" class="offer-card__link">Start the free diagnostic <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="offer-card">
+        <span class="offer-card__tag">$500 · Paid</span>
+        <h3 class="offer-card__title">Direction Session</h3>
+        <p class="offer-card__meta">$500 · 60-minute diagnostic</p>
+        <p class="offer-card__body">A focused diagnostic session with Veronica. We locate the load-bearing issue generating most of your downstream problems and map the specific next moves. You leave with a written summary you can act on immediately.</p>
+        <a href="https://tychedigitalagency.com/direction-session/" class="offer-card__link">Learn about the Direction Session <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="offer-card offer-card--featured">
+        <span class="offer-card__tag">Done-for-you</span>
+        <h3 class="offer-card__title">Implementation<br>Partnership</h3>
+        <p class="offer-card__meta">Free strategy call · Scoped per project</p>
+        <p class="offer-card__body">Ready to hand this off entirely? We build and manage the systems behind your marketing so you can run the business. Start with a free strategy call to discuss fit and scope.</p>
+        <a href="https://tychedigitalagency.com/book/" class="offer-card__link">Book a free strategy call <span aria-hidden="true">→</span></a>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker__track">
-    <span class="ticker__item">Marketing Strategy</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Conversion Architecture</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Direction Sessions</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Funnel Systems</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Positioning and Messaging</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Lead Generation</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Done-For-You Implementation</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Business Clarity</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Marketing Strategy</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Conversion Architecture</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Direction Sessions</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Funnel Systems</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Positioning and Messaging</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Lead Generation</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Done-For-You Implementation</span><span class="ticker__sep">&#10022;</span>
-    <span class="ticker__item">Business Clarity</span><span class="ticker__sep">&#10022;</span>
-  </div>
-</div>
+<!-- ===================================================================
+     SECTION · The actual problem (ivory)
+==================================================================== -->
+<section class="section section--linen" id="the-problem">
+  <div class="section__inner problem-grid">
+    <figure class="problem-image">
+      <div class="problem-image__frame">
+        <!-- Animated blank astrology wheel — concentric circles + division lines, no zodiac symbols -->
+        <svg class="astro-wheel" viewBox="0 0 400 400" aria-hidden="true">
+          <defs>
+            <linearGradient id="astroBg" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#1e3249"/>
+              <stop offset="100%" stop-color="#0d1d38"/>
+            </linearGradient>
+            <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#d4a95a" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#d4a95a" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
 
-<!-- THREE PATHS -->
-<section class="paths" id="services">
-  <div class="paths__inner">
-    <div class="paths__header">
-      <p class="eyebrow eyebrow--center">Three Ways to Work With Tyche</p>
-      <h2 class="section-title" style="text-align:center">Start where <em>you are.</em></h2>
-      <p class="section-body" style="text-align:center;max-width:520px;margin:0 auto">Each entry point is designed for a specific stage. Not sure which fits? The free diagnostic takes five minutes and tells you exactly where to start.</p>
-    </div>
-    <div class="paths__grid">
+          <rect width="400" height="400" fill="url(#astroBg)"/>
 
-      <div class="path-card path-card--free">
-        <div class="path-card__pill"><span class="offer-pill offer-pill--free">Free</span></div>
-        <div class="path-card__title">Check Your Alignment</div>
-        <div class="path-card__price">Free Diagnostic &middot; 5 Minutes</div>
-        <p class="path-card__desc">Not sure what is wrong or where to start? This free diagnostic narrows your focus to the actions that actually move revenue right now. You receive a PDF by email. No sales call required.</p>
-        <a href="/alignment" class="path-card__link">Start the free diagnostic &rarr;</a>
+          <!-- Background subtle stars -->
+          <g fill="#f5e9c8" opacity="0.5">
+            <circle cx="40" cy="60" r="0.8"/>
+            <circle cx="350" cy="50" r="1"/>
+            <circle cx="80" cy="340" r="0.9"/>
+            <circle cx="360" cy="350" r="1.1"/>
+            <circle cx="30" cy="200" r="0.7"/>
+            <circle cx="370" cy="180" r="0.9"/>
+          </g>
+
+          <!-- Center glow -->
+          <circle cx="200" cy="200" r="160" fill="url(#centerGlow)"/>
+
+          <!-- OUTER WHEEL — slow rotation -->
+          <g class="astro-wheel__outer">
+            <circle cx="200" cy="200" r="160" fill="none" stroke="#d4a95a" stroke-width="1" opacity="0.8"/>
+            <circle cx="200" cy="200" r="155" fill="none" stroke="#d4a95a" stroke-width="0.4" opacity="0.5"/>
+            <!-- 12 division lines -->
+            <g stroke="#d4a95a" stroke-width="0.6" opacity="0.6">
+              <line x1="200" y1="40" x2="200" y2="65"/>
+              <line x1="280" y1="60" x2="266" y2="83"/>
+              <line x1="340" y1="120" x2="320" y2="134"/>
+              <line x1="360" y1="200" x2="335" y2="200"/>
+              <line x1="340" y1="280" x2="320" y2="266"/>
+              <line x1="280" y1="340" x2="266" y2="317"/>
+              <line x1="200" y1="360" x2="200" y2="335"/>
+              <line x1="120" y1="340" x2="134" y2="317"/>
+              <line x1="60" y1="280" x2="80" y2="266"/>
+              <line x1="40" y1="200" x2="65" y2="200"/>
+              <line x1="60" y1="120" x2="80" y2="134"/>
+              <line x1="120" y1="60" x2="134" y2="83"/>
+            </g>
+            <!-- Outer tick marks -->
+            <g fill="#d4a95a" opacity="0.7">
+              <circle cx="200" cy="40" r="2"/>
+              <circle cx="360" cy="200" r="2"/>
+              <circle cx="200" cy="360" r="2"/>
+              <circle cx="40" cy="200" r="2"/>
+            </g>
+          </g>
+
+          <!-- MIDDLE WHEEL — counter-rotation -->
+          <g class="astro-wheel__middle">
+            <circle cx="200" cy="200" r="115" fill="none" stroke="#d4a95a" stroke-width="0.6" opacity="0.6"/>
+            <circle cx="200" cy="200" r="110" fill="none" stroke="#d4a95a" stroke-width="0.4" opacity="0.4"/>
+            <!-- Middle division lines (8 segments) -->
+            <g stroke="#d4a95a" stroke-width="0.4" opacity="0.5">
+              <line x1="200" y1="85" x2="200" y2="115"/>
+              <line x1="285" y1="115" x2="275" y2="125"/>
+              <line x1="315" y1="200" x2="285" y2="200"/>
+              <line x1="285" y1="285" x2="275" y2="275"/>
+              <line x1="200" y1="315" x2="200" y2="285"/>
+              <line x1="115" y1="285" x2="125" y2="275"/>
+              <line x1="85" y1="200" x2="115" y2="200"/>
+              <line x1="115" y1="115" x2="125" y2="125"/>
+            </g>
+          </g>
+
+          <!-- INNER WHEEL — slowest rotation -->
+          <g class="astro-wheel__inner">
+            <circle cx="200" cy="200" r="70" fill="none" stroke="#d4a95a" stroke-width="0.6" opacity="0.7"/>
+            <circle cx="200" cy="200" r="55" fill="none" stroke="#d4a95a" stroke-width="0.4" opacity="0.5"/>
+            <circle cx="200" cy="200" r="40" fill="none" stroke="#d4a95a" stroke-width="0.4" opacity="0.4"/>
+            <!-- Inner cross + diagonals -->
+            <g stroke="#d4a95a" stroke-width="0.5" opacity="0.6">
+              <line x1="130" y1="200" x2="270" y2="200"/>
+              <line x1="200" y1="130" x2="200" y2="270"/>
+              <line x1="150" y1="150" x2="250" y2="250"/>
+              <line x1="250" y1="150" x2="150" y2="250"/>
+            </g>
+          </g>
+
+          <!-- Center -->
+          <circle cx="200" cy="200" r="6" fill="#d4a95a"/>
+          <circle cx="200" cy="200" r="3" fill="#c4500a"/>
+        </svg>
+
+        <!-- Five floating stickers around the wheel -->
+        <img src="assets/images/sticker-cowboy.png" alt="" class="wheel-sticker wheel-sticker--cowboy" aria-hidden="true">
+        <img src="assets/images/sticker-mirror.png" alt="" class="wheel-sticker wheel-sticker--mirror" aria-hidden="true">
+        <img src="assets/images/sticker-pig.png" alt="" class="wheel-sticker wheel-sticker--pig" aria-hidden="true">
+        <img src="assets/images/sticker-dollar.png" alt="" class="wheel-sticker wheel-sticker--dollar" aria-hidden="true">
+        <img src="assets/images/sticker-horseshoe.png" alt="" class="wheel-sticker wheel-sticker--horseshoe" aria-hidden="true">
       </div>
+    </figure>
 
-      <div class="path-card path-card--paid">
-        <div class="path-card__pill"><span class="offer-pill offer-pill--paid">$500 &middot; Paid</span></div>
-        <div class="path-card__title">Direction Session</div>
-        <div class="path-card__price">$500 &middot; 60-Minute Diagnostic</div>
-        <p class="path-card__desc">A focused diagnostic session with Veronica. We locate the load-bearing issue generating most of your downstream problems and map the specific next moves. You leave with a written summary you can act on immediately.</p>
-        <a href="/direction-session" class="path-card__link">Learn about the Direction Session &rarr;</a>
-      </div>
+    <div class="problem-copy">
+      <span class="eyebrow eyebrow--left">— The actual problem —</span>
+      <h2 class="problem-copy__title">Not a content problem.<br><em>A conversion problem.</em></h2>
 
-      <div class="path-card path-card--dfy">
-        <div class="path-card__pill"><span class="offer-pill offer-pill--dfy">Done-For-You</span></div>
-        <div class="path-card__title">Implementation Partnership</div>
-        <div class="path-card__price">Free Strategy Call &middot; Scoped per project</div>
-        <p class="path-card__desc">Ready to hand this off entirely? We build and manage the systems behind your marketing so you can run the business. Start with a free strategy call to discuss fit and scope.</p>
-        <a href="/book" class="path-card__link">Book a free strategy call &rarr;</a>
-      </div>
+      <p class="problem-copy__lede">If your marketing is not bringing in consistent leads, something structural is off. Not everything. Just something. Most of the time it is one load-bearing issue generating most of the downstream drag.</p>
 
-    </div>
-  </div>
-</section>
+      <blockquote class="pull-quote">
+        Most businesses are not invisible. They are unclear.
+      </blockquote>
 
-<!-- PROBLEM -->
-<section class="problem">
-  <div class="problem__inner inner">
-    <div class="problem__image">
-      <img class="problem__img" src="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/6889457ec625b86eb84cf734.jpeg" alt="Strategic marketing work in progress">
-    </div>
-    <div>
-      <p class="eyebrow">The Actual Problem</p>
-      <h2 class="section-title">Not a content problem.<br><em>A conversion problem.</em></h2>
-      <p class="section-body">If your marketing is not bringing in consistent leads, something structural is off. Not everything. Just something. Most of the time it is one load-bearing issue generating most of the downstream drag.</p>
-      <blockquote class="problem__pull">Most businesses are not invisible. They are unclear.</blockquote>
-      <div class="symptom-list">
-        <div class="symptom"><div class="symptom__dot"></div><div><div class="symptom__title">Visibility without a conversion path</div><div class="symptom__desc">Traffic arrives. There is no clear route to booking.</div></div></div>
-        <div class="symptom"><div class="symptom__dot"></div><div><div class="symptom__title">Messaging that describes but does not position</div><div class="symptom__desc">People read your site and still are not sure you are the answer.</div></div></div>
-        <div class="symptom"><div class="symptom__dot"></div><div><div class="symptom__title">Systems working against each other</div><div class="symptom__desc">Your funnel, content, and offers point in different directions.</div></div></div>
-        <div class="symptom"><div class="symptom__dot"></div><div><div class="symptom__title">The load-bearing issue hiding below the surface</div><div class="symptom__desc">One structural fix that would make most of the rest work significantly better.</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROOF -->
-<section class="proof" id="proof">
-  <div class="proof__inner inner">
-    <div class="testimonial">
-      <div class="testimonial__mark">&ldquo;</div>
-      <p class="testimonial__text">Having the Tyche team working on our branding, website, and more has been a worthwhile investment. Everything finally feels connected and working together.</p>
-      <div class="testimonial__attr"><strong>Christina Parise</strong>Clear Mind Counseling NV &middot; Owner and Therapist</div>
-    </div>
-    <div class="proof__numbers">
-      <div class="proof__stat"><div class="proof__stat-num">Fortune 500</div><div class="proof__stat-desc">to bootstrapped, experience at every stage of business</div></div>
-      <div class="proof__stat"><div class="proof__stat-num">20 years</div><div class="proof__stat-desc">in sales, marketing, and brand strategy</div></div>
-      <div class="proof__stat"><div class="proof__stat-num">1 fix</div><div class="proof__stat-desc">most businesses actually need. The load-bearing issue. Not a full rebuild.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <div class="cta__inner">
-    <p class="eyebrow eyebrow--light eyebrow--center">Not Sure Where to Start</p>
-    <h2 class="cta__h2">Pick the path<br>that fits <em>right now.</em></h2>
-    <p class="cta__sub">Free diagnostic, paid diagnostic, or a discovery call for done-for-you work. All three lead somewhere useful.</p>
-    <div class="cta__options">
-      <a href="/alignment" class="btn btn--outline-light">Free Diagnostic</a>
-      <a href="/direction-session" class="btn btn--ivory">Direction Session &mdash; $500</a>
-      <a href="/book" class="btn btn--navy" style="background:var(--brown)">Free Strategy Call</a>
-    </div>
-    <p class="cta__note">No pitch. No pressure. Just a clearer picture of what to do next.</p>
-  </div>
-</section>
-
-<!-- SEO -->
-<div class="seo">
-  <div class="seo__inner">
-    <div>
-      <h3>Marketing Strategy for Service-Based Businesses</h3>
-      <p>Tyche Digital Agency works with founders, consultants, and service providers generating traction but not consistent conversions. We specialize in finding the structural issue underneath surface symptoms and building the conversion infrastructure to fix it. Based in Las Vegas, NV. Serving clients across the United States.</p>
-    </div>
-    <div>
-      <h3>Why leads stop converting</h3>
-      <ul>
-        <li>Positioning that describes rather than differentiates</li>
-        <li>No clear conversion path from content to booking</li>
-        <li>Disconnected funnel stages canceling each other out</li>
-        <li>Offer structure creating confusion instead of urgency</li>
-        <li>No follow-up system to capture warm traffic</li>
-        <li>Visibility without conversion architecture</li>
+      <ul class="symptom-list">
+        <li>
+          <span class="symptom-list__icon" aria-hidden="true"></span>
+          <div>
+            <h4>Visibility without a conversion path</h4>
+            <p>Traffic arrives. There is no clear route to booking.</p>
+          </div>
+        </li>
+        <li>
+          <span class="symptom-list__icon" aria-hidden="true"></span>
+          <div>
+            <h4>Messaging that describes but does not position</h4>
+            <p>People read your site and still are not sure you are the answer.</p>
+          </div>
+        </li>
+        <li>
+          <span class="symptom-list__icon" aria-hidden="true"></span>
+          <div>
+            <h4>Systems working against each other</h4>
+            <p>Your funnel, content, and offers point in different directions.</p>
+          </div>
+        </li>
+        <li>
+          <span class="symptom-list__icon" aria-hidden="true"></span>
+          <div>
+            <h4>The load-bearing issue hiding below the surface</h4>
+            <p>One structural fix that would make most of the rest work significantly better.</p>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
-</div>
+</section>
 
-<footer class="footer">
-  <div class="footer-top inner">
-    <div><div class="footer__logo"><img src="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/693b11a65b7f645e8fd3a4ef.png" alt="Tyche Digital Agency"></div><p class="footer__desc">Marketing systems for service businesses that want leads without manufacturing momentum every week.</p></div>
-    <div class="footer-col"><h4>Work With Us</h4><a href="/book">Free Strategy Call</a><a href="/direction-session">Direction Session &mdash; $500</a><a href="/alignment">Check Your Alignment</a><a href="/services">All Services</a></div>
-    <div class="footer-col"><h4>Resources</h4><a href="https://tychedigitalagency.blogspot.com/" target="_blank">The Direction Journal</a><a href="/faq">FAQ</a><a href="https://go.veronicadietz.com/magnetic-messaging-mini-guide-2200" target="_blank">Magnetic Messaging</a><a href="https://tychedigitalagency.com/investment-guide" target="_blank">Investment Guide</a></div>
-    <div class="footer-col"><h4>Company</h4><a href="/about">About Veronica</a><a href="https://share.google/3Jh5pTQkHRGIj3X5I" target="_blank">VD Advisory Group</a><a href="https://go.tychedigitalagency.net/contact" target="_blank">Contact</a><a href="https://go.tychedigitalagency.net/privacy-policy" target="_blank">Privacy Policy</a><a href="https://go.tychedigitalagency.net/terms-and-conditions" target="_blank">Terms</a></div>
+<!-- ===================================================================
+     SECTION · Testimonial + stats
+==================================================================== -->
+<section class="section section--cream" id="proof">
+  <div class="section__inner proof-grid">
+    <figure class="testimonial">
+      <svg class="testimonial__mark" width="32" height="24" viewBox="0 0 32 24" aria-hidden="true">
+        <path d="M 6 4 C 2 4 0 8 0 14 C 0 18 2 20 6 20 C 10 20 12 18 12 14 C 12 10 10 8 6 8 C 6 4 10 4 10 4 Z M 22 4 C 18 4 16 8 16 14 C 16 18 18 20 22 20 C 26 20 28 18 28 14 C 28 10 26 8 22 8 C 22 4 26 4 26 4 Z" fill="#d4a95a"/>
+      </svg>
+      <blockquote class="testimonial__quote">
+        Having the Tyche team working on our branding, website, and more has been a worthwhile investment. Everything finally feels connected and working together.
+      </blockquote>
+      <figcaption class="testimonial__byline">
+        <strong>Christina Parise</strong>
+        <span>Clear Mind Counseling NV · Owner and Therapist</span>
+      </figcaption>
+    </figure>
+
+    <div class="proof-stats">
+      <div class="proof-stats__item">
+        <div class="proof-stats__value">Fortune 500</div>
+        <p>to bootstrapped, experience at every stage of business</p>
+      </div>
+      <div class="proof-stats__divider" aria-hidden="true"></div>
+      <div class="proof-stats__item">
+        <div class="proof-stats__value">20 years</div>
+        <p>in sales, marketing, and brand strategy</p>
+      </div>
+      <div class="proof-stats__divider" aria-hidden="true"></div>
+      <div class="proof-stats__item">
+        <div class="proof-stats__value">1 fix</div>
+        <p>most businesses actually need. The load-bearing issue. Not a full rebuild.</p>
+      </div>
+    </div>
   </div>
-  <div class="footer-bottom inner"><span>&copy; 2026 Tyche Digital Agency &middot; Founded by <a href="https://share.google/3Jh5pTQkHRGIj3X5I" target="_blank">Veronica Dietz</a></span><a href="https://go.tychedigitalagency.net/terms-and-conditions" target="_blank">Terms</a></div>
+</section>
+
+<!-- ===================================================================
+     SECTION · TYCHE TOUCH (Cosmic)
+==================================================================== -->
+<section class="section section--cosmic" id="tyche-touch">
+  <!-- Cosmic background layers -->
+  <div class="cosmos cosmos--section" aria-hidden="true">
+    <div class="cosmos__gradient cosmos__gradient--section"></div>
+    <div class="cosmos__nebula cosmos__nebula--section-1"></div>
+    <div class="cosmos__nebula cosmos__nebula--section-2"></div>
+    <svg class="cosmos__stars cosmos__stars--section" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+    <div class="cosmos__dust cosmos__dust--s1"></div>
+    <div class="cosmos__dust cosmos__dust--s2"></div>
+    <div class="cosmos__dust cosmos__dust--s3"></div>
+    <div class="cosmos__dust cosmos__dust--s4"></div>
+  </div>
+
+  <div class="section__inner">
+    <!-- Intro -->
+    <div class="section-head section-head--center tt-head">
+      <span class="badge badge--gold">
+        <span class="badge__dot" aria-hidden="true"></span>
+        New · Free · Unlimited
+        <span class="badge__dot" aria-hidden="true"></span>
+      </span>
+      <h2 class="tt-head__title">Meet <em>TycheTouch.</em></h2>
+      <p class="tt-head__subline"><em>A free marketing direction, pulled from your chart, your design, and your business.</em></p>
+      <p class="tt-head__body">Not a horoscope. A starting point. Two minutes of inputs, one tailored read on where to position, what to say, and what channel is actually yours to own.</p>
+    </div>
+
+    <!-- How it works -->
+    <div class="tt-how">
+      <div class="section-head section-head--center">
+        <span class="eyebrow eyebrow--gold">— Three Steps —</span>
+        <h3 class="tt-how__title">From <em>chart</em> to <em>direction</em> to <em>action.</em></h3>
+      </div>
+
+      <ol class="tt-how__steps">
+        <li class="tt-how__step">
+          <div class="tt-how__circle">
+            <svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true">
+              <circle cx="15" cy="15" r="10" fill="none" stroke="currentColor" stroke-width="1"/>
+              <line x1="15" y1="5" x2="15" y2="10" stroke="currentColor" stroke-width="1"/>
+              <line x1="15" y1="20" x2="15" y2="25" stroke="currentColor" stroke-width="1"/>
+              <line x1="5" y1="15" x2="10" y2="15" stroke="currentColor" stroke-width="1"/>
+              <line x1="20" y1="15" x2="25" y2="15" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <span class="tt-how__numeral">— I —</span>
+          <h4>Cast the chart</h4>
+          <p><em>Birth details, your business, what feels off. Two minutes.</em></p>
+        </li>
+        <li class="tt-how__step">
+          <div class="tt-how__circle">
+            <svg width="28" height="28" viewBox="0 0 30 30" aria-hidden="true">
+              <path d="M 15 2 L 18 11 L 28 12 L 20 18 L 23 28 L 15 22 L 7 28 L 10 18 L 2 12 L 12 11 Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="tt-how__numeral">— II —</span>
+          <h4>Read the direction</h4>
+          <p><em>Your positioning, your channel, your next right move. In plain language.</em></p>
+        </li>
+        <li class="tt-how__step tt-how__step--final">
+          <div class="tt-how__circle tt-how__circle--accent">
+            <svg width="24" height="24" viewBox="0 0 30 30" aria-hidden="true">
+              <path d="M 6 15 L 24 15 M 18 9 L 24 15 L 18 21" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="tt-how__numeral tt-how__numeral--accent">— III —</span>
+          <h4>Take the next step</h4>
+          <p><em>Book a free call or a paid Direction Session. Or just keep the reading.</em></p>
+        </li>
+      </ol>
+
+      <div class="tt-final-cta">
+        <a href="https://tychetouch.com" class="btn btn--primary btn--large">Try TycheTouch <span aria-hidden="true">→</span></a>
+        <p class="tt-final-cta__note"><em>Free forever. No signup to start. Save the reading only if you want to.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================
+     SECTION · Pick the path
+==================================================================== -->
+<section class="section section--navy" id="pick-path">
+  <div class="section__inner section__inner--narrow">
+    <div class="section-head section-head--center">
+      <span class="eyebrow eyebrow--gold">— Not sure where to start —</span>
+      <h2 class="section-head__title section-head__title--light">Pick the path<br>that fits <em>right now.</em></h2>
+      <p class="section-head__body section-head__body--light">Free diagnostic, paid diagnostic, or a discovery call for done-for-you work. All three lead somewhere useful.</p>
+    </div>
+
+    <div class="path-ctas">
+      <a href="https://tychedigitalagency.com/alignment/" class="path-ctas__btn">Free Diagnostic</a>
+      <a href="https://tychedigitalagency.com/direction-session/" class="path-ctas__btn">Direction Session — $500</a>
+      <a href="https://tychedigitalagency.com/book/" class="path-ctas__btn path-ctas__btn--accent">Free Strategy Call</a>
+    </div>
+
+    <p class="path-ctas__note"><em>No pitch. No pressure. Just a clearer picture of what to do next.</em></p>
+  </div>
+</section>
+
+<!-- ===================================================================
+     SECTION · SEO content block
+==================================================================== -->
+<section class="section section--cream section--seo" id="seo-content">
+  <div class="section__inner seo-grid">
+    <div class="seo-col">
+      <h2 class="seo-col__title">Marketing Strategy for Service-Based Businesses</h2>
+      <p><em>Tyche Digital Agency works with founders, consultants, and service providers generating traction but not consistent conversions. We specialize in finding the structural issue underneath surface symptoms and building the conversion infrastructure to fix it. Based in Las Vegas, NV. Serving clients across the United States.</em></p>
+    </div>
+    <div class="seo-col">
+      <h2 class="seo-col__title">Why leads stop converting</h2>
+      <ul class="seo-list">
+        <li><span aria-hidden="true">→</span><em>Positioning that describes rather than differentiates</em></li>
+        <li><span aria-hidden="true">→</span><em>No clear conversion path from content to booking</em></li>
+        <li><span aria-hidden="true">→</span><em>Disconnected funnel stages canceling each other out</em></li>
+        <li><span aria-hidden="true">→</span><em>Offer structure creating confusion instead of urgency</em></li>
+        <li><span aria-hidden="true">→</span><em>No follow-up system to capture warm traffic</em></li>
+        <li><span aria-hidden="true">→</span><em>Visibility without conversion architecture</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================
+     FOOTER
+==================================================================== -->
+<footer class="footer" id="contact">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="/" class="footer__logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M 12 2 L 14 10 L 22 12 L 14 14 L 12 22 L 10 14 L 2 12 L 10 10 Z" fill="#d4a95a"/>
+        </svg>
+        <span>TYCHE</span>
+        <span class="footer__logo-sub">Digital Agency</span>
+      </a>
+      <p class="footer__tagline"><em>Marketing systems for service businesses that want leads without manufacturing momentum every week.</em></p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__col-title">Work With Us</h4>
+      <ul>
+        <li><a href="https://tychedigitalagency.com/book/">Free Strategy Call</a></li>
+        <li><a href="https://tychedigitalagency.com/direction-session/">Direction Session — $500</a></li>
+        <li><a href="https://tychedigitalagency.com/alignment/">Check Your Alignment</a></li>
+        <li><a href="#services">All Services</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__col-title">Resources</h4>
+      <ul>
+        <li><a href="#journal">The Direction Journal</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#messaging">Magnetic Messaging</a></li>
+        <li><a href="#investment-guide">Investment Guide</a></li>
+        <li><a href="https://tychetouch.com">TycheTouch</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__col-title">Company</h4>
+      <ul>
+        <li><a href="#about">About Veronica</a></li>
+        <li><a href="https://go.veronicadietz.com">VD Advisory Group</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span>© 2026 Tyche Digital Agency · Founded by <strong>Veronica Dietz</strong></span>
+    <span class="footer__cities">Las Vegas <span aria-hidden="true" class="footer__star">✦</span> Costa Mesa <span aria-hidden="true" class="footer__star">✦</span> Missoula</span>
+  </div>
 </footer>
 
+<script src="assets/js/script.js"></script>
 </body>
 </html>
